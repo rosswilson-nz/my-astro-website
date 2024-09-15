@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JournalCitation from '../components/JournalCitation.astro';
+const { citation } = Astro.props;
+---
+<BaseLayout pageTitle={citation.title}>
+    <h3>{citation.journal}</h3>
+    <h4>Published</h4>
+    {citation.date.toLocaleDateString("en-NZ", {day: "numeric", month: "long", year: "numeric"})}
+    <h4>Citation</h4>
+    <JournalCitation url={`https://doi.org/${citation.doi}`} citation={citation}/>
+    <h4>Abstract</h4>
+    <slot />
+    
+</BaseLayout>
+
+<style>
+    h4 {
+        margin-bottom: 0px;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        color: #555;
+    }
+</style>

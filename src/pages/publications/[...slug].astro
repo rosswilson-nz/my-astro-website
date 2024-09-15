@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import MarkdownPublicationLayout from '../../layouts/MarkdownPublicationLayout.astro';
+
+export async function getStaticPaths() {
+  const publications = await getCollection('publications');
+  return publications.map(pub => ({
+    params: { slug: pub.slug }, props: { pub },
+  }));
+}
+
+const { pub } = Astro.props;
+const { Content } = await pub.render();
+---
+<MarkdownPublicationLayout citation={pub.data}>
+  <Content />
+</MarkdownPublicationLayout>

@@ -1,0 +1,7 @@
+---
+const { url, citation } = Astro.props;
+---
+{citation.author.join(", ")}.
+<a href={url}>{citation.title}</a>.
+<em>{citation.journal}</em>
+{citation.year};{citation.volume}:{citation.pages}

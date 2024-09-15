@@ -1,8 +1,9 @@
 ---
-layout: ../layouts/MarkdownBaseLayout.astro
+layout: ../layouts/MarkdownResearchLayout.astro
 title: 'Research'
 ---
-## Research Projects
+
+[//]: # (Research projects under level-3 headings)
 
 ### Reducing the burden of osteoarthritis in Aotearoa New Zealand (2022-2027)
 
@@ -21,12 +22,6 @@ I have received grants from the Otago Medical Research Foundation and the H.S an
 * A third study investigates the long-term health, economic, and social impacts of perioperative opioid prescribing, and shows substantial increases in healthcare use and costs associated with preoperative opioid prescribing, but little evidence of any negative impacts of postoperative opioid prescribing to support short-term surgical recovery. This study has been published in Family Practice.
 * A further study looking at the dose-response relationship between preoperative opioid use and long-term outcomes is in progress. An analysis plan is freely available on the Open Science Framework, and a preliminary report will be published shortly.
 
-### The health economic case for implementing ACL injury prevention intervntions (2020-ongoing)
+### The health economic case for implementing ACL injury prevention interventions (2020-ongoing)
 
 I am part of a project, led by Dr Yana Pryymachenko, that has received preliminary funding from the Health Research Council of New Zealand to investigate the impact of ACL injury prevention programmes on long-term outcomes, including the incidence and associated health and economic burden of early knee osteoarthritis. This preliminary project involves investigating the feasibility of using matching methods to identify comparable groups of individuals with and without the occurrence of an ACL injury, using comprehensive linked national data from the IDI, and to use these matched cohorts to evaluate long-term outcomes following an ACL injury. If this feasibility study proves successful, we intend to use this approach to inform cost-effectiveness evaluations of injury prevention strategies to support the implementation and uptake of such programmes across the New Zealand population (for example, via schools, sports clubs, and workplaces where people are at risk of ACL injury).
-
-## Publications and outputs
-
-### Journal articles
-
-* The long-term impacts of opioid use before and after joint arthroplasty: matched cohort analysis of New Zealand linked register data. Yana Pryymachenko, Ross Wilson, J. Haxby Abbott, Michelle Dowsey, Peter Choong. *Family Practice* 2023; In Press.

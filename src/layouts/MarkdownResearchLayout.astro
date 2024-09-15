@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+import JournalCitation from '../components/JournalCitation.astro';
+import MarkdownBaseLayout from '../layouts/MarkdownBaseLayout.astro';
+const allPublications = await getCollection('publications');
+const { frontmatter } = Astro.props;
+---
+<MarkdownBaseLayout frontmatter={frontmatter}>
+    <h2>Research Projects</h2>
+    <slot />
+    <h2>Publications and Outputs</h2>
+    <h3>Journal articles</h3>
+    {allPublications.map((pub) => <p><JournalCitation url={`/publications/${pub.slug}/`} citation={pub.data} /></p>)}
+    <h3>Conference presentations</h3>
+    To be added.
+</MarkdownBaseLayout>
