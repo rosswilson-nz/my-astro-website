@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/MarkdownResearchLayout.astro
-title: 'Research'
+title: 'My Research'
 ---
 
 [//]: # (Research projects under level-3 headings)

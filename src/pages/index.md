@@ -6,6 +6,6 @@ I am a research fellow in the Centre for Musculoskeletal Outcomes Research at th
 
 My research area is health economics, with a specific focus on the measurement and valuation of health-related quality of life, economic evaluation of healthcare interventions, and simulation modelling of disease epidemiology and treatment to inform health policy.
 
-Further details on my research interests and publications can be found under the Research tab above.
+Further details on my research interests and publications can be found under the [Research](/research/) tab above.
 
-I can be reached at [ross.wilson@otago.ac.nz].
+I can be reached at ross.wilson@otago.ac.nz.

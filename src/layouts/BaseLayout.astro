@@ -13,15 +13,19 @@ const { pageTitle } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
-	<body class="flex min-h-screen max-w-screen flex-col overflow-x-hidden">
+	<body class="flex min-h-screen max-w-screen flex-col overflow-x-hidden bg-white dark:bg-black/30">
 		<div class="inset-x-0 top-0 z-20 max-h-screen sticky bg-black/30 backdrop-blur-x1">
 			<Header />
 		</div>
 
-		<h1>{pageTitle}</h1>
-		<main class="relative z-10 flex flex-1 flex-col">
-        	<slot />
-		</main>
+		<div class="text-center">
+			<h1 class="text-3xl pb-8">{pageTitle}</h1>
+			<main class="relative z-10 flex flex-1 flex-col">
+				<div class="prose max-w-none prose-a:no-underline">
+				    <slot />
+			    </div>
+			</main>
+	    </div>
 		<Footer />
 		<script>
 			import "../scripts/menu.js";
