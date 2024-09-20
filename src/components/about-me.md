@@ -1,8 +1,4 @@
----
-layout: ../layouts/MarkdownBaseLayout.astro
-title: 'Ross Wilson'
----
-I am a research fellow in the Centre for Musculoskeletal Outcomes Research at the Dunedin School of Medicine, University of Otago.
+I am a senior research fellow in the Centre for Musculoskeletal Outcomes Research at the Dunedin School of Medicine, University of Otago.
 
 My research area is health economics, with a specific focus on the measurement and valuation of health-related quality of life, economic evaluation of healthcare interventions, and simulation modelling of disease epidemiology and treatment to inform health policy.
 

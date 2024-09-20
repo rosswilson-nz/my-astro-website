@@ -1,0 +1,17 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import { Content as Projects } from '../components/research-projects.md'
+const title = "My Research"
+---
+<MainLayout pageTitle={title}>
+    <div class="prose max-w-screen-lg mx-4 mt-8 text-primary prose-headings:text-primary prose-a:text-primary">
+    <h1 class="text-4xl">{title}</h1>
+    <h2>Research Projects</h2>
+    <Projects />
+    <h2>Publications and Outputs</h2>
+    <h3>Journal articles</h3>
+    To be added. Import from YAML source file (Hayagriva format)
+    <h3>Conference presentations</h3>
+    To be added.
+    </div>
+</MainLayout>

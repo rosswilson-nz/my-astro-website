@@ -1,0 +1,17 @@
+<!-- ---
+import MarkdownBaseLayout from "./MarkdownBaseLayout.astro";
+import MarkdownProse from "./MarkdownProse.astro";
+import Footer from '../components/Footer.astro';
+const { frontmatter } = Astro.props;
+---
+<MarkdownBaseLayout frontmatter={frontmatter}>
+    <img src="/profile.jpg" style="height:16em; width:16em;"
+     class="m-auto rounded-full mt-10">
+    <div class="m-0 max-w-screen-lg flex flex-col flex-1 justify-center mx-auto relative z-10">
+        <h1 class="text-center text-4xl font-medium py-8">{frontmatter.title}</h1>
+        <main>
+            <MarkdownProse center><slot /></MarkdownProse>
+        </main>
+    </div>
+</MarkdownBaseLayout>
+<Footer /> -->

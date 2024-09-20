@@ -1,0 +1,6 @@
+---
+const { center = false } = Astro.props;
+---
+<div class:list={["prose", {'text-center': center}, 'max-w-none', 'prose-a:no-underline', 'prose-a:text-primary', 'prose-headings:text-primary', 'text-primary', 'text-lg']}>
+    <slot />
+</div>

@@ -1,9 +1,20 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	darkmode: 'selector',
 	theme: {
 		fontFamily: {},
+		colors: {
+			transparent: 'transparent',
+			current: 'currentColor',
+			black: colors.black,
+			white: colors.white,
+			slate: '#272b30',
+			gray: '#3a3f44',
+			light: '#dee2e6',
+			primary: '#aaa'
+		},
 		extend: {
 			aria: {
 				current: 'current',
@@ -22,41 +33,6 @@ export default {
 				sm: '0px 2px 1px rgba(24, 24, 27, 0.01), 0px 1px 1px rgba(24, 24, 27, 0.05), 0px 1px 1px rgba(24, 24, 27, 0.09), 0px 0px 0px rgba(24, 24, 27, 0.1), 0px 0px 0px rgba(24, 24, 27, 0.1);',
 				md: '0px 5px 2px rgba(24, 24, 27, 0.03), 0px 3px 2px rgba(24, 24, 27, 0.1), 0px 1px 1px rgba(24, 24, 27, 0.17), 0px 0px 1px rgba(24, 24, 27, 0.2), 0px 0px 0px rgba(24, 24, 27, 0.2);',
 				lg: '0px 25px 7px rgba(24, 24, 27, 0.01), 0px 16px 6px rgba(24, 24, 27, 0.04), 0px 9px 5px rgba(24, 24, 27, 0.15), 0px 4px 4px rgba(24, 24, 27, 0.26), 0px 1px 2px rgba(24, 24, 27, 0.29), 0px 0px 0px rgba(24, 24, 27, 0.3);',
-			},
-			colors: {
-				black: '#0D0F14',
-				// TODO: replace with brand off-white color
-				white: '#ffffff',
-				'astro-gray': {
-					100: '#F2F6FA',
-					200: '#BFC1C9',
-					300: '#858B98',
-					400: '#545864',
-					500: '#343841',
-					600: '#23262D',
-					700: '#17191E',
-				},
-				'astro-dark': {
-					100: '#858B98',
-					300: '#343841',
-					400: '#18191E',
-					500: '#4B4B4B',
-					600: '#2C2C2C',
-					700: '#11172A',
-					800: '#0C0F19',
-					900: '#060913',
-				},
-				'astro-blue': '#3245FF',
-				'astro-purple': '#BC52EE',
-				'astro-purple-dark': '#3F224D',
-				'astro-red': '#D83333',
-				'astro-pink': {
-					light: '#E8C4F9',
-					DEFAULT: '#F041FF',
-				},
-				'astro-orange': '#F8E42E',
-				'astro-yellow': '#FF7D54',
-				'astro-hover': '#E8C4F9',
 			},
 			backgroundImage: {
 				'blue-purple-gradient': 'linear-gradient(83.21deg, #3245FF 0%, #B845ED 100%)',

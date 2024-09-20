@@ -1,0 +1,14 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import { Content } from '../components/teaching.md'
+import { Content as Resources } from '../components/teaching-resources.md'
+const title = "Teaching"
+---
+<MainLayout pageTitle={title}>
+    <div class="prose max-w-screen-lg prose-lg mx-4 mt-8 text-primary prose-headings:text-primary prose-a:text-primary prose-ul:my-0 prose-li:my-0 prose-li:leading-tight">
+    <h1 class="text-4xl">{title}</h1>
+    <Content />
+    <h2>Resources</h2>
+    <Resources />
+    </div>
+</MainLayout>

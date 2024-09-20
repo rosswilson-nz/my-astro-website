@@ -88,11 +88,11 @@ a:focus {
 
 html.dark {
   background-color: #272b30;
-  color: #6c757d;
+  color: #dee2e6;
 }
 
 .dark header {
-  background-color: #6c757d;
+  background-color: #3a3f44;
 }
 
 .dark .nav-links a {
