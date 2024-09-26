@@ -49,6 +49,9 @@ export default {
 			maxWidth: {
 				prose: '768px',
 			},
+			padding: {
+				header: '5rem',
+			},
 			zIndex: {
 				blur: '-1',
 				grid: '-2',

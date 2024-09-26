@@ -8,14 +8,14 @@ const { pageTitle } = Astro.props;
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
-	<body class="flex max-w-screen flex-col overflow-x-hidden">
-		<div id="nav" class="inset-x-0 top-0 z-20 max-h-screen sticky bg-gray backdrop-blur-x1">
+	<body>
+		<div id="nav" class="fixed top-0 z-20 flex w-full bg-gray backdrop-blur-x1">
 			<Header />
 		</div>
-		<main class="max-w-screen-xl mx-auto relative z-10 flex flex-1 flex-col"><slot /></main>
+		<main class="max-w-screen-xl mx-auto z-10 pt-header"><slot /></main>
 	</body>
 </html>

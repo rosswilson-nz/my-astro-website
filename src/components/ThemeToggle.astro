@@ -1,9 +1,47 @@
 ---
+import Icon from './Icon.astro'
 ---
-<div class="absolute right-5"><button id="themeToggle">
+<div class="absolute right-5">
+  <button>
+    <span class="sr-only">Dark theme</span>
+    <span class="icon light"><Icon icon="light-mode" size="16" /></span>
+    <span class="icon dark"><Icon icon="dark-mode" size="16" /></span>"
+  </button>
+</div>
+
+<style>
+  button {
+    display: flex;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  .icon {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    padding: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+  .icon.light::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+  }
+  :global(.theme-dark) .icon.light:before {
+    transform: translateX(100%);
+  }
+</style>
+
+
+<div class="absolute right-5">
+  <button id="themeToggle">
     <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-        <path class="bi bi-toggle-off" d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/>
-        <path class="bi bi-toggle-on" d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+      <path class="bi bi-toggle-off" d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/>
+      <path class="bi bi-toggle-on" d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
     </svg>
   </button></div>
   

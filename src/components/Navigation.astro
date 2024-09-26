@@ -1,7 +1,19 @@
 ---
+import type { NavItem } from "../types"
+const navItems: Array<NavItem> = [
+    { title: "Home", url : "/" },
+    { title: "Research", url: "/research/" },
+    { title: "Teaching", url: "/teaching/" },
+]
 ---
-<div class="nav-links font-medium text-xl ml-4">
-    <a href="/" class="px-2">Home</a>
-    <a href="/research/" class="px-2">Research</a>
-    <a href="/teaching/" class="px-2">Teaching</a>
+<div class="flex items-center gap-6">
+    <nav><ul class="flex items-center gap-6">
+        {navItems.map(({ title, url }) => (
+            <li>
+                <a class="text-lg font-bold" href={url}>
+                    {title}
+                </a>
+            </li>
+        ))}
+    </ul></nav>
 </div>

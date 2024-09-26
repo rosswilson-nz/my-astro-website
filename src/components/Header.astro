@@ -3,10 +3,7 @@ import Hamburger from './Hamburger.astro';
 import Navigation from './Navigation.astro';
 import ThemeToggle from './ThemeToggle.astro';
 ---
-<header>
-  <nav class="container flex flex-row h-header items-center">
-    <Hamburger class="basis-1/12"/>
-    <Navigation class="basis-10/12"/>
+<header class="fixed top-0 flex w-full h-header items-center justify-between border-b border-transparent px-4 py-4 bg-gray backdrop-blur-x1">
+    <Navigation class="basis-11/12"/>
     <ThemeToggle class="basis-1/12"/>
-  </nav>
 </header>

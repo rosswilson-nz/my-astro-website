@@ -1,7 +1,12 @@
 ---
-const { url, citation } = Astro.props;
+import type { CollectionEntry } from "astro:content";
+interface Props {
+    article: CollectionEntry<'publications'>;
+}
+const { article } = Astro.props;
+
 ---
-{citation.author.join(", ")}.
-<a href={url}>{citation.title}</a>.
-<em>{citation.journal}</em>
-{citation.year};{citation.volume}:{citation.pages}
+{ article.data.author.join(", ") }.
+<a href={`https://doi.org/${article.data.doi}`}>{article.data.title}</a>.
+<em>{article.data.journal}</em>
+{article.data.year};{article.data.volume}:{article.data.pages}

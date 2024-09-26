@@ -1,17 +1,34 @@
 ---
+import { getCollection } from 'astro:content';
 import MainLayout from "../layouts/MainLayout.astro"
 import { Content as Projects } from '../components/research-projects.md'
+import { Content as OldProjects } from '../components/previous-projects.md'
+import JournalCitation from '../components/JournalCitation.astro';
 const title = "My Research"
+
+const journalArticles = await getCollection('publications');
 ---
 <MainLayout pageTitle={title}>
-    <div class="prose max-w-screen-lg mx-4 mt-8 text-primary prose-headings:text-primary prose-a:text-primary">
-    <h1 class="text-4xl">{title}</h1>
-    <h2>Research Projects</h2>
-    <Projects />
-    <h2>Publications and Outputs</h2>
-    <h3>Journal articles</h3>
-    To be added. Import from YAML source file (Hayagriva format)
-    <h3>Conference presentations</h3>
-    To be added.
+    <div class="max-w-screen-lg mx-auto">
+        <div class="prose max-w-none mx-4 mt-8 text-primary prose-headings:text-primary prose-a:text-primary">
+            <h1 class="text-4xl">{title}</h1>
+            <h2 id="research-projects">Research Projects</h2>
+            <Projects />
+            <details class="ring-1 ring-light/20 shadow-lg rounded-lg text-primary">
+                <summary class="px-3 text-md font-semibold select-none">Previous research projects</summary>
+                <div class="mx-3 mb-3 text-md">
+                    <OldProjects class="text-md"/>
+                </div>
+            </details>
+            <h2 id="publications-and-outputs">Publications and Outputs</h2>
+            <h3>Journal articles</h3>
+            <ul class="list-none p-0 m-0">
+                {journalArticles.map(article => (
+                    <li><JournalCitation article = {article} /></li>
+                ))}
+            </ul>
+            <h3>Conference presentations</h3>
+            To be added.
+        </div>
     </div>
 </MainLayout>
