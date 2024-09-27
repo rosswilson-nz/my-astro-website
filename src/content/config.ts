@@ -15,6 +15,18 @@ const journalArticle = defineCollection({
     })
 });
 
+const otherPublication = defineCollection({
+  type: 'data',
+  schema: z.object({
+    title: z.string(),
+    with: z.string().optional(),
+    description: z.string().optional(),
+    published: z.string().optional(),
+    date: z.coerce.date(),
+    url: z.string().optional(),
+  })
+});
+
 const conferencePresentation = defineCollection({
   type: 'data',
   schema: z.object({
@@ -30,5 +42,6 @@ const conferencePresentation = defineCollection({
 // Export a single `collections` object to register your collection(s)
 export const collections = {
   publications: journalArticle,
+  "other-publications": otherPublication,
   conferences: conferencePresentation,
 };

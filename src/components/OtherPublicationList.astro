@@ -1,0 +1,14 @@
+---
+import OtherCitation from "./OtherCitation.astro";
+import type { CollectionEntry } from "astro:content";
+interface Props {
+    publications: Array<CollectionEntry<'other-publications'>>;
+}
+const { publications } = Astro.props;
+---
+
+<ul class="list-none p-0 m-0">
+    {publications.map(publication => (
+        <li><OtherCitation publication = {publication} /></li>
+    ))}
+</ul>

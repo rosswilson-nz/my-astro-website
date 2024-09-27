@@ -4,10 +4,14 @@ import MainLayout from "../layouts/MainLayout.astro"
 import { Content as Projects } from '../components/research-projects.md'
 import { Content as OldProjects } from '../components/previous-projects.md'
 import ArticleList from '../components/ArticleList.astro';
+import OtherPublicationList from '../components/OtherPublicationList.astro';
 import ConferenceList from '../components/ConferenceList.astro';
 const title = "My Research"
 
 const journalArticles = (await getCollection('publications')).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const otherPublications = (await getCollection('other-publications')).sort(
     (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 const conferencePresentations = (await getCollection('conferences')).sort(
@@ -29,6 +33,8 @@ const conferencePresentations = (await getCollection('conferences')).sort(
             <h2 id="publications-and-outputs">Publications and Outputs</h2>
             <h3>Journal articles</h3>
             <ArticleList articles={ journalArticles } />
+            <h3>Other publications</h3>
+            <OtherPublicationList publications={ otherPublications } />
             <h3>Conference presentations</h3>
             <ConferenceList conferences={ conferencePresentations } />
         </div>
