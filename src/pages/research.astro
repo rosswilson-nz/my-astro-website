@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import MainLayout from "../layouts/MainLayout.astro"
 import { Content as Projects } from '../components/research-projects.md'
 import { Content as OldProjects } from '../components/previous-projects.md'
-import JournalCitation from '../components/JournalCitation.astro';
+import ArticleList from '../components/ArticleList.astro';
 const title = "My Research"
 
 const journalArticles = await getCollection('publications');
@@ -22,11 +22,7 @@ const journalArticles = await getCollection('publications');
             </details>
             <h2 id="publications-and-outputs">Publications and Outputs</h2>
             <h3>Journal articles</h3>
-            <ul class="list-none p-0 m-0">
-                {journalArticles.map(article => (
-                    <li><JournalCitation article = {article} /></li>
-                ))}
-            </ul>
+            <ArticleList articles={ journalArticles } />
             <h3>Conference presentations</h3>
             To be added.
         </div>

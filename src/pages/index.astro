@@ -1,7 +1,8 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro"
-import { Content } from '../components/about-me.md'
-const title = "Ross Wilson"
+import MainLayout from "../layouts/MainLayout.astro";
+import { Content } from '../components/about-me.md';
+import Footer from "../components/Footer.astro";
+const title = "Ross Wilson";
 ---
 <MainLayout pageTitle={title}>
     <img src="/profile.jpg" class="m-auto rounded-full mt-10 w-64 h-64">
@@ -9,5 +10,6 @@ const title = "Ross Wilson"
         <h1 class="text-4xl">{title}</h1>
         <Content />
     </div>
+    <Footer />
     
 </MainLayout>

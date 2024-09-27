@@ -1,0 +1,14 @@
+---
+import JournalCitation from "./JournalCitation.astro";
+import type { CollectionEntry } from "astro:content";
+interface Props {
+    articles: Array<CollectionEntry<'publications'>>;
+}
+const { articles } = Astro.props;
+---
+
+<ul class="list-none p-0 m-0">
+    {articles.map(article => (
+        <li><JournalCitation article = {article} /></li>
+    ))}
+</ul>

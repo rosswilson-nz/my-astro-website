@@ -1,4 +1,4 @@
-
+$schema: "../../../.astro/collections/publications.scheme.json"
 title: "Risk Factors for Chronic Opioid Use Following Hip and Knee Arthroplasty: Evidence from New Zealand Population Data"
 journal: "Journal of Arthroplasty"
 date: "2020-10-13"
