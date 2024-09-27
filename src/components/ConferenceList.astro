@@ -1,0 +1,14 @@
+---
+import ConferenceCitation from "./ConferenceCitation.astro";
+import type { CollectionEntry } from "astro:content";
+interface Props {
+    conferences: Array<CollectionEntry<'conferences'>>;
+}
+const { conferences } = Astro.props;
+---
+
+<ul class="list-none p-0 m-0">
+    {conferences.map(conference => (
+        <li><ConferenceCitation conference = {conference} /></li>
+    ))}
+</ul>

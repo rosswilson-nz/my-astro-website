@@ -4,9 +4,15 @@ import MainLayout from "../layouts/MainLayout.astro"
 import { Content as Projects } from '../components/research-projects.md'
 import { Content as OldProjects } from '../components/previous-projects.md'
 import ArticleList from '../components/ArticleList.astro';
+import ConferenceList from '../components/ConferenceList.astro';
 const title = "My Research"
 
-const journalArticles = await getCollection('publications');
+const journalArticles = (await getCollection('publications')).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const conferencePresentations = (await getCollection('conferences')).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
 ---
 <MainLayout pageTitle={title}>
     <div class="max-w-screen-lg mx-auto">
@@ -24,7 +30,7 @@ const journalArticles = await getCollection('publications');
             <h3>Journal articles</h3>
             <ArticleList articles={ journalArticles } />
             <h3>Conference presentations</h3>
-            To be added.
+            <ConferenceList conferences={ conferencePresentations } />
         </div>
     </div>
 </MainLayout>
